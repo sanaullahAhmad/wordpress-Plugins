@@ -1,0 +1,24 @@
+<?php
+
+include_once("lib/facebook.php"); //include facebook SDK
+ 
+######### edit details ##########
+$appId = '329432800488948'; //Facebook App ID
+$appSecret = 'd0f88924d959f6c4d9894a57b5e53002'; // Facebook App Secret
+$fbPermissions = 'publish_stream,manage_pages';  //Required facebook permissions
+
+$appUrl = "http://totallylikerandom.com/fbsharer/";
+
+//Set this to the fan page ID to post your file contents to.	
+$userPageId 	= '203487659784575';
+//$userPageId 	= '163691933769733';
+##################################
+
+//Call Facebook API
+$facebook = new Facebook(array(
+  'appId'  => $appId,
+  'secret' => $appSecret,
+  'fileUpload' => true
+));
+
+?>
